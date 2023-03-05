@@ -1,0 +1,198 @@
+@import "./base/base";
+@import "./utils/variables";
+@import "./utils/classes.scss";
+@import "./layouts/components";
+
+
+
+body{
+    overflow-x: hidden;
+    background-color: $dark;
+   
+}
+
+#wrapper{
+    position: relative;
+    margin-inline: auto;
+    max-width: 80vw;
+}
+
+
+.link-section{
+    width: 100%;
+    justify-content: space-between;
+    padding: 15px;
+    
+}
+
+
+.block-overlay{
+    z-index: 10;   
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.social-media li{
+    margin-right: 25px;
+}
+
+.social-media svg:hover path{
+    fill: $mint;
+}
+
+.profile-section{
+    border-bottom: 2px solid $white-gray;
+    padding-bottom: 50px;
+}
+
+.profile-section .left{
+    background: url(.././assets/images/pattern-rings.svg);
+    padding-top: 100px;
+    width: 80%;
+}
+
+
+.profile-section .right{
+    width: 20%;
+}
+
+figure{
+    position: relative;
+    cursor: pointer;
+}
+
+figure img{
+    width: 100%;
+    max-width: 500px;
+}
+
+.profile-section__description-2{
+    max-width: 500px;
+    padding: 30px 0;
+}
+.name{
+    border-bottom: 2px solid $mint;
+}
+.project{
+    background: url(../assets/images/pattern-circle.svg);
+    background-size: cover;
+   
+}
+
+.circle-1{
+    position: absolute;
+    width: 200px;
+    top: 60%;
+    left: -100px;
+}
+
+
+
+.rings{
+    position: absolute;
+    top: 10%;
+    left: -250px;
+}
+
+.skills{
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2.5rem;
+    justify-content: space-between;
+    margin-top: 50px;
+    margin-bottom: 20vh;
+   
+    .circle-2{
+        position: absolute;
+        width: 400px;
+        bottom: -60px;
+        right: -300px;
+        // transform: translateX(200%);
+    }
+    // Media query ici
+}
+
+.skill-container{
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+
+.projects{
+    margin-bottom: 15vh;
+}
+
+.projects__header{
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10vh;
+}
+
+.fix-height{
+    height: fit-content;
+}
+
+.projects__container{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.project{
+    width: 45%;
+    margin-bottom: 5vh;
+    @media only screen and (min-width: 1100px){
+            position: relative;
+    }
+}
+
+.view-project{
+    @media only screen and (min-width: 1100px){
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 80%;
+            background-color: hsla(0, 0%, 0%, 0.6);
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-evenly;
+            transition: all 0.3s;
+            cursor: pointer;  
+    }
+   
+}
+
+
+.show {
+    display: flex;
+  }
+
+
+
+.project img{
+    width: 100%;
+    height: 100%;
+}
+
+.technology{
+    display: flex;
+    gap: 1rem;
+}
+
+
+.contact{
+    height: 50vh;
+}
+
+
+
+
+
