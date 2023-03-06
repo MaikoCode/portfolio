@@ -6,17 +6,23 @@
 
 
 body{
-    overflow-x: hidden;
+    
     background-color: $dark;
    
 }
 
 #wrapper{
+    overflow: hidden;
     position: relative;
     margin-inline: auto;
-    max-width: 80vw;
+    max-width: 100vw;
+    padding: 0 50px;
+    
 }
 
+.presentation{
+    position: relative;
+}
 
 .link-section{
     width: 100%;
@@ -47,25 +53,18 @@ body{
 }
 
 .profile-section .left{
-    background: url(.././assets/images/pattern-rings.svg);
+   
     padding-top: 100px;
     width: 80%;
 }
+
 
 
 .profile-section .right{
     width: 20%;
 }
 
-figure{
-    position: relative;
-    cursor: pointer;
-}
 
-figure img{
-    width: 100%;
-    max-width: 500px;
-}
 
 .profile-section__description-2{
     max-width: 500px;
@@ -74,11 +73,7 @@ figure img{
 .name{
     border-bottom: 2px solid $mint;
 }
-.project{
-    background: url(../assets/images/pattern-circle.svg);
-    background-size: cover;
-   
-}
+
 
 .circle-1{
     position: absolute;
@@ -103,12 +98,27 @@ figure img{
     justify-content: space-between;
     margin-top: 50px;
     margin-bottom: 20vh;
+
+    
    
     .circle-2{
+        
+        // position: absolute;
+        // width: 400px;
+        // bottom: -60px;
+        // right: -150px;
+
+        @media screen and (min-width: 550px){
+                width: 50%;
+        }
+
         position: absolute;
-        width: 400px;
-        bottom: -60px;
-        right: -300px;
+        bottom: 0;
+        right: 0;
+        transform: translate(60%, 50%);
+        z-index: 5;
+        width: 100%;
+        
         // transform: translateX(200%);
     }
     // Media query ici
@@ -137,6 +147,51 @@ figure img{
     height: fit-content;
 }
 
+
+figure{
+    position: relative;
+    cursor: pointer;
+
+    @media  only screen and (min-width: 1100px) {
+    .view-project{
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        width: 500px;
+        height: 90%;
+        opacity: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        justify-content: center;
+        align-items: center;
+        transition: opacity 0.2s ease;
+        background-color: hsla(0, 0%, 0%, 0.6);
+}
+
+        &:hover  .view-project{
+            opacity: 0.9;
+        }
+
+     
+}
+
+    @media only screen and (max-width: 1100px){
+        .view-project{
+            display: none;
+        }
+    }
+}
+
+
+figure img{
+    width: 100%;
+    max-width: 500px;
+   
+}
+
 .projects__container{
     display: flex;
     justify-content: space-between;
@@ -153,22 +208,14 @@ figure img{
 }
 
 .view-project{
+    display: block;
     @media only screen and (min-width: 1100px){
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 80%;
-            background-color: hsla(0, 0%, 0%, 0.6);
             display: none;
-            flex-direction: column;
-            align-items: center;
-            justify-content: space-evenly;
-            transition: all 0.3s;
-            cursor: pointer;  
     }
-   
 }
+
+
+
 
 
 .show {
