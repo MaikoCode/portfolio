@@ -115,7 +115,9 @@
 
 
 // colors
-
+.bg-red{
+    background-color: red;
+}
 @each $property, $value in $color-property{
     .clr-#{"" + $property}{
         color: $value;

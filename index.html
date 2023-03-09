@@ -7,6 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;700&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="main.css">
     <title>Document</title>
 </head>
@@ -320,19 +321,22 @@
             <div class="right">
                 <form>
                     <div class="input-line">
-                        <input type="text" placeholder="NAME" class="input-line__field uppercase">
+                        <input type="text" placeholder="NAME" class="input-line__field uppercase input-name">
                         <div class="border-input"></div>
+                        <p class="alert">Sorry, invalid format here</p>
                     </div>
                     <div class="input-line">
-                        <input type="email" placeholder="EMAIL" class="input-line__field uppercase">
+                        <input type="text" placeholder="EMAIL" class="input-line__field uppercase input-email">
                         <div class="border-input"></div>
+                        <p class="alert">Sorry, invalid format here</p>
                     </div>
                     <div class="input-line">
-                        <textarea  placeholder="MESSAGE" class="input-line__field uppercase">MESSAGE</textarea> 
+                        <textarea   class="input-line__field uppercase input-message">MESSAGE</textarea> 
                         <div class="border-input"></div>
+                        <p class="alert">Sorry, invalid format here</p>
                     </div>
 
-                    <button type="submit" class="contact-button clr-white uppercase">
+                    <button type="submit" class="contact-button clr-white uppercase submit-button">
                         Send message
                     </button>
 
@@ -362,7 +366,6 @@
     </div>
 
     
-
     <script src="./main.js"></script>
    
 </body>

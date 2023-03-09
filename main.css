@@ -147,6 +147,10 @@ ul li {
   text-transform: uppercase;
 }
 
+.bg-red {
+  background-color: red;
+}
+
 .clr-dark {
   color: hsl(0, 0%, 8%);
 }
@@ -718,6 +722,14 @@ figcaption {
   .technology-title {
     font-size: 2rem;
   }
+}
+
+.alert {
+  display: none;
+  padding-top: 10px;
+  text-align: right;
+  color: rgb(255, 111, 91);
+  font-size: 0.75rem;
 }
 
 /*# sourceMappingURL=main.css.map */
