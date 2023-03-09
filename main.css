@@ -289,6 +289,8 @@ ul li {
 
 body {
   background-color: hsl(0, 0%, 8%);
+  max-width: 1300px;
+  margin-inline: auto;
 }
 
 #wrapper {
@@ -296,7 +298,12 @@ body {
   position: relative;
   margin-inline: auto;
   max-width: 100vw;
-  padding: 0 50px;
+  padding: 0 3.125rem;
+}
+@media only screen and (max-width: 780px) {
+  #wrapper {
+    padding: 0 0.75rem;
+  }
 }
 
 .presentation {
@@ -309,6 +316,16 @@ body {
   padding: 15px;
 }
 
+@media only screen and (max-width: 780px) {
+  .logo {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+  .link-section {
+    flex-direction: column;
+    align-items: center;
+  }
+}
 .block-overlay {
   z-index: 10;
   position: absolute;
@@ -319,7 +336,18 @@ body {
 .social-media li {
   margin-right: 25px;
 }
+@media only screen and (max-width: 780px) {
+  .social-media li {
+    margin-right: 0;
+  }
+}
 
+@media only screen and (max-width: 780px) {
+  .social-media {
+    width: 50%;
+    justify-content: space-evenly;
+  }
+}
 .social-media svg:hover path {
   fill: hsl(153, 71%, 59%);
 }
@@ -328,16 +356,57 @@ body {
   border-bottom: 2px solid hsl(0, 0%, 85%);
   padding-bottom: 50px;
 }
+@media only screen and (max-width: 780px) {
+  .profile-section {
+    flex-direction: column-reverse;
+  }
+}
+
+.profile-section__description-1 {
+  font-size: 5.5rem;
+}
+@media only screen and (max-width: 780px) {
+  .profile-section__description-1 {
+    font-size: 2.5rem;
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: 780px) {
+  .profile-section__description-2 {
+    text-align: center;
+  }
+}
 
 .profile-section .left {
   padding-top: 100px;
   width: 80%;
 }
+@media only screen and (max-width: 780px) {
+  .profile-section .left {
+    width: 100%;
+  }
+}
 
 .profile-section .right {
   width: 20%;
 }
+@media only screen and (max-width: 780px) {
+  .profile-section .right {
+    width: 100%;
+  }
+}
 
+@media only screen and (max-width: 780px) {
+  .profile-section .left {
+    text-align: center;
+  }
+  .profile-photo {
+    width: 50%;
+    margin-inline: auto;
+    margin-top: 50px;
+  }
+}
 .profile-section__description-2 {
   max-width: 500px;
   padding: 30px 0;
@@ -352,6 +421,11 @@ body {
   width: 200px;
   top: 60%;
   left: -100px;
+}
+@media only screen and (max-width: 780px) {
+  .circle-1 {
+    left: 80%;
+  }
 }
 
 .rings {
@@ -369,6 +443,14 @@ body {
   margin-top: 50px;
   margin-bottom: 20vh;
 }
+@media only screen and (max-width: 750px) {
+  .skills {
+    flex-direction: column;
+    align-items: center;
+    border-bottom: 2px solid hsl(0, 0%, 100%);
+    padding-bottom: 75px;
+  }
+}
 .skills .circle-2 {
   position: absolute;
   bottom: 0;
@@ -377,9 +459,15 @@ body {
   z-index: 5;
   width: 100%;
 }
-@media screen and (min-width: 550px) {
+@media screen and (min-width: 1100px) {
   .skills .circle-2 {
     width: 50%;
+  }
+}
+@media screen and (max-width: 750px) {
+  .skills .circle-2 {
+    width: 100%;
+    transform: translate(60%, 50%);
   }
 }
 
@@ -389,6 +477,11 @@ body {
   flex-direction: column;
   justify-content: space-between;
   gap: 1rem;
+}
+@media only screen and (max-width: 750px) {
+  .skill-container {
+    align-items: center;
+  }
 }
 
 .projects {
@@ -417,7 +510,7 @@ figure {
     bottom: 0;
     right: 0;
     width: 500px;
-    height: 90%;
+    height: 86%;
     opacity: 0;
     display: flex;
     flex-direction: column;
@@ -437,6 +530,11 @@ figure {
   }
 }
 
+@media only screen and (max-width: 780px) {
+  .view-project .contact-button {
+    font-size: 0.5rem;
+  }
+}
 figure img {
   width: 100%;
   max-width: 500px;
@@ -481,9 +579,123 @@ figure img {
   display: flex;
   gap: 1rem;
 }
+@media only screen and (max-width: 780px) {
+  .technology {
+    font-size: 0.75rem;
+  }
+}
 
 .contact {
-  height: 50vh;
+  position: relative;
+}
+
+.rings-2 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transform: translate(-50%, -150%);
+}
+
+.contact-block {
+  display: flex;
+  padding: 3.125rem;
+}
+@media only screen and (max-width: 1100px) {
+  .contact-block {
+    padding: 30px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 200px;
+  }
+  .contact-block .left {
+    margin-bottom: 25px;
+    text-align: center;
+  }
+}
+
+.contact-block .left, .contact-block .right {
+  width: 50%;
+}
+@media only screen and (max-width: 1000px) {
+  .contact-block .left, .contact-block .right {
+    width: 80%;
+  }
+}
+
+.contact-header {
+  padding: 0 0 25px 0;
+}
+
+.contact-description {
+  max-width: 400px;
+  line-height: 1.5;
+}
+@media only screen and (max-width: 1000px) {
+  .contact-description {
+    margin-inline: auto;
+  }
+}
+
+.contact textarea {
+  width: 100%;
+  height: 200px;
+  padding: 10px;
+}
+
+.contact textarea::placeholder {
+  text-align: left;
+}
+
+.contact .right {
+  position: relative;
+}
+
+.contact button {
+  margin-top: 25px;
+  position: absolute;
+  right: 0%;
+}
+
+.footer-link {
+  width: calc(90% + 2.5rem);
+  border-top: 1px solid hsl(0, 0%, 100%);
+  margin: auto;
+  margin-top: 50px;
+  padding: 50px;
+}
+
+figcaption {
+  font-size: 1.5rem;
+}
+@media only screen and (max-width: 780px) {
+  figcaption {
+    font-size: 0.75rem;
+  }
+}
+
+.project-title {
+  font-size: 5.5rem;
+}
+@media only screen and (max-width: 780px) {
+  .project-title {
+    font-size: 2rem;
+  }
+}
+
+@media only screen and (max-width: 780px) {
+  .projects__header .contact-button {
+    font-size: 0.75rem;
+  }
+}
+
+.technology-title {
+  font-size: 3rem;
+}
+@media only screen and (max-width: 780px) {
+  .technology-title {
+    font-size: 2rem;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

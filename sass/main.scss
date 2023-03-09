@@ -8,6 +8,8 @@
 body{
     
     background-color: $dark;
+    max-width: 1300px;
+    margin-inline: auto;
    
 }
 
@@ -16,7 +18,13 @@ body{
     position: relative;
     margin-inline: auto;
     max-width: 100vw;
-    padding: 0 50px;
+    // padding: 0 50px;
+    padding: 0 3.125rem;
+
+    @media only screen and (max-width: 780px){
+        padding: 0 0.75rem;
+    }
+    
     
 }
 
@@ -31,6 +39,18 @@ body{
     
 }
 
+@media only screen and (max-width: 780px){
+    .logo{
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+    }
+    .link-section{
+        flex-direction: column;
+        align-items: center;
+        
+    }
+}
+
 
 .block-overlay{
     z-index: 10;   
@@ -41,7 +61,19 @@ body{
 
 .social-media li{
     margin-right: 25px;
+    @media only screen and (max-width: 780px){
+        margin-right: 0;
+    }
 }
+
+@media only screen and (max-width: 780px){
+    .social-media{
+        width: 50%;
+        justify-content: space-evenly;
+    }
+}
+
+
 
 .social-media svg:hover path{
     fill: $mint;
@@ -50,19 +82,59 @@ body{
 .profile-section{
     border-bottom: 2px solid $white-gray;
     padding-bottom: 50px;
+
+    @media only screen and (max-width: 780px){
+        flex-direction: column-reverse;
+    }
+}
+
+.profile-section__description-1{
+    font-size: $fs-xl;
+    @media only screen and (max-width: 780px){
+        font-size: 2.5rem;
+        text-align: center;
+    }
+}
+
+.profile-section__description-2{
+    @media only screen and (max-width: 780px){
+        text-align: center;
+    }
 }
 
 .profile-section .left{
    
     padding-top: 100px;
     width: 80%;
+    @media only screen and (max-width: 780px){
+        width: 100%;
+    }
 }
 
 
 
 .profile-section .right{
     width: 20%;
+    @media only screen and (max-width: 780px){
+        width: 100%;
+    }
 }
+
+@media only screen and (max-width: 780px){
+    .profile-section .left{
+        text-align: center;
+    }
+
+    .profile-photo{
+        width: 50%;
+        margin-inline: auto;
+        margin-top: 50px;
+    }
+}
+
+
+
+
 
 
 
@@ -80,6 +152,9 @@ body{
     width: 200px;
     top: 60%;
     left: -100px;
+    @media only screen and (max-width: 780px){
+       left: 80%;
+    }
 }
 
 
@@ -99,17 +174,25 @@ body{
     margin-top: 50px;
     margin-bottom: 20vh;
 
+    @media only screen and (max-width: 750px){
+        flex-direction: column;
+        align-items: center;
+        border-bottom: 2px solid $white;
+        padding-bottom: 75px;
+    }
+
+
     
    
     .circle-2{
         
-        // position: absolute;
-        // width: 400px;
-        // bottom: -60px;
-        // right: -150px;
-
-        @media screen and (min-width: 550px){
+        @media screen and (min-width: 1100px){
                 width: 50%;
+        }
+
+        @media screen and (max-width: 750px){
+            width: 100%;
+            transform: translate(60%, 50%);
         }
 
         position: absolute;
@@ -121,7 +204,7 @@ body{
         
         // transform: translateX(200%);
     }
-    // Media query ici
+
 }
 
 .skill-container{
@@ -130,6 +213,10 @@ body{
     flex-direction: column;
     justify-content: space-between;
     gap: 1rem;
+
+    @media only screen and (max-width: 750px){
+        align-items: center;
+    }
 }
 
 
@@ -160,7 +247,7 @@ figure{
         bottom: 0;
         right: 0;
         width: 500px;
-        height: 90%;
+        height: 86%;
         opacity: 0;
         display: flex;
         flex-direction: column;
@@ -175,6 +262,9 @@ figure{
             opacity: 0.9;
         }
 
+    
+        
+
      
 }
 
@@ -183,7 +273,17 @@ figure{
             display: none;
         }
     }
+
+    
 }
+
+@media only screen and (max-width: 780px){
+    .view-project .contact-button{
+        font-size: 0.5rem;
+    }
+    
+}
+
 
 
 figure img{
@@ -202,6 +302,7 @@ figure img{
 .project{
     width: 45%;
     margin-bottom: 5vh;
+    
     @media only screen and (min-width: 1100px){
             position: relative;
     }
@@ -232,12 +333,130 @@ figure img{
 .technology{
     display: flex;
     gap: 1rem;
+    @media only screen and (max-width: 780px){
+        font-size: 0.75rem;
+    }
 }
 
 
 .contact{
-    height: 50vh;
+    position: relative;
 }
+
+.rings-2{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transform: translate(-50%, -150%);
+    
+}
+
+
+.contact-block{
+    display: flex;
+    padding: 3.125rem;
+
+    @media only screen and (max-width: 1100px){
+        padding: 30px;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 200px;
+
+        .left{
+            margin-bottom: 25px;
+            text-align: center;
+        }
+
+       
+        
+       
+    }
+}
+.contact-block .left, .contact-block .right{
+    width: 50%;
+    @media only screen and (max-width: 1000px){
+            width: 80%;       
+    }
+}
+
+.contact-header{
+    padding: 0 0 25px 0;
+}
+
+.contact-description{
+    max-width: 400px;
+    line-height: 1.5;
+    @media only screen and (max-width: 1000px){
+        margin-inline: auto;
+    }
+    
+    
+}
+
+.contact textarea{
+    width: 100%;
+    height: 200px;
+    padding: 10px;
+   
+}
+
+.contact textarea::placeholder{
+    text-align: left;
+}
+
+.contact .right{
+    position: relative;
+}
+
+.contact button{
+    margin-top: 25px;
+    position: absolute;
+    right: 0%;
+}
+
+.footer-link{
+    
+    width: calc(90% + 2.5rem);
+    border-top: 1px solid $white;
+    margin: auto;
+    margin-top: 50px;
+    padding: 50px;
+}
+
+figcaption{
+    font-size: $fs-m;
+    @media only screen and (max-width: 780px){
+        font-size: 0.75rem;
+    }
+}
+
+.project-title{
+    font-size: $fs-xl;
+    @media only screen and (max-width: 780px){
+        font-size: 2rem;
+    }
+}
+
+.projects__header .contact-button{
+    @media only screen and (max-width: 780px){
+        font-size: 0.75rem;
+    }
+}
+
+.technology-title{
+    font-size: $fs-l;
+    @media only screen and (max-width: 780px){
+        font-size: 2rem;
+    }
+}
+
+
+
+
+
+
+
 
 
 
