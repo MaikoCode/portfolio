@@ -1,4 +1,3 @@
-
 const form = document.querySelector("form")
 const inputName = document.querySelector('.input-name');
 const inputEmail = document.querySelector('.input-email');
@@ -43,9 +42,9 @@ form.addEventListener("submit", (e) => {
         alerts[i].style.display = "none";
     }
     e.target.reset();
-}
 
-    
+
+}
 
 })
 
